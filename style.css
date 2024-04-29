@@ -21,8 +21,7 @@ p {
 
 #header {
     width: 100%;
-    height: 70vh;
-    /* add background image either here or below, stretching across the screen */
+    height: 20vh;
 }
 
 .container {
@@ -32,6 +31,7 @@ p {
 .content {
     text-align: center;
 }
+
 
 nav {
     display: flex;
@@ -45,7 +45,7 @@ nav {
 }
 
 .header-text {
-    margin-top: 20%;
+    margin-top: 20px;
     font-size: 30px;
 }
 
@@ -57,6 +57,18 @@ nav {
     font-size: 30px;
 }
 
+/* ----------banner---------- */
+
+.banner {
+    width: 100%;
+    height: 500px;
+    background-image: url('plant.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .button {
     display: inline-block;
