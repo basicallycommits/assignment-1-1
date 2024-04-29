@@ -69,7 +69,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #000000;
 }
 
 /* -------------button------------- */
@@ -82,11 +81,11 @@ nav {
     font-size: 40px;
     text-decoration: none;
     border-radius: 5px;
-    border: 2px solid #141414;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.5s ease;
 }
 
 .button:hover {
-    background-color: #ffffff;
-    color: #141414;
+    background-color: #ff7d56;
+    color: #ffffff;
+    transform: scale(1.05);
 }
