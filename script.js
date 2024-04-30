@@ -61,6 +61,9 @@ document.addEventListener('wheel', event => {
 leftArrow.disabled = true;
 leftArrow.classList.add('disabled');
 
+// Show caption for the first image
+showCaption(currentIndex);
+
 
 
 /* -------------Modal Functionality---------------- */
