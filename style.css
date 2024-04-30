@@ -136,7 +136,7 @@ nav ul li a:hover {
     backdrop-filter: blur(5px); /* Apply blur effect to background */
 }
 
-.modal-content {
+#form-ct {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
@@ -166,7 +166,7 @@ nav ul li a:hover {
 
 
 /* Style for form div */
-.modal-content form div {
+#form-ct form div {
     margin-bottom: 20px;
 }
 
