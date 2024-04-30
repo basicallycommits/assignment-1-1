@@ -98,16 +98,17 @@ nav ul li a:hover {
     position: relative; /* Added position relative for arrow positioning */
 }
 
-/* Left and Right Arrows */
+/* Left and Right Buttons */
 .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
+    width: auto; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
     background-color: rgba(255, 255, 255, 0.5); /* Slightly transparent */
     cursor: pointer;
-    z-index: 1; /* Ensure arrows are above the images */
+    z-index: 1; /* Ensure buttons are above the images */
+    font-family: Arial, sans-serif; /* Change font family as needed */
 }
 
 .left-arrow {
@@ -118,29 +119,25 @@ nav ul li a:hover {
     right: 10px;
 }
 
-.left-arrow::before,
-.left-arrow::after,
-.right-arrow::before,
-.right-arrow::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 10px;
-    height: 2px;
-    background-color: #555; /* Arrow color */
-    transform-origin: center;
+/* Text styles for buttons */
+.navarrow {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(244, 70, 17, 0.5); /* Semi-transparent background color */
+    color: #fff;
+    font-size: 16px; /* Adjust font size as needed */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.5s ease;
 }
 
-.left-arrow::before,
-.right-arrow::before {
-    transform: translate(-50%, -50%) rotate(45deg);
+.navarrow:hover {
+    background-color: rgba(255, 125, 86, 0.8); /* Semi-transparent hover background color */
+    color: #ffffff;
+    transform: scale(1.05);
 }
 
-.left-arrow::after,
-.right-arrow::after {
-    transform: translate(-50%, -50%) rotate(-45deg);
-}
 
 
 /* Gallery Images */
