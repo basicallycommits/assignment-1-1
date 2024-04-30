@@ -86,16 +86,86 @@ nav ul li a:hover {
 }
 
 /* ----------banner---------- */
+.banner-wrapper {
+    width: 100%;
+    max-height: 400px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the banner horizontally */
+    overflow: hidden; /* Hide the arrows that overflow */
+}
 
 .banner {
-    width: 100%;
     height: 400px;
-    background-image: url('forest.jpg');
-    background-size: cover;
-    background-position: center;
+    position: relative; /* Added position relative for arrow positioning */
+}
+
+/* Left and Right Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.5); /* Slightly transparent */
+    cursor: pointer;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.left-arrow::before,
+.left-arrow::after,
+.right-arrow::before,
+.right-arrow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    background-color: #555; /* Arrow color */
+}
+
+.left-arrow::before,
+.right-arrow::before {
+    transform: rotate(45deg);
+}
+
+.left-arrow::after,
+.right-arrow::after {
+    transform: rotate(-45deg);
+}
+
+/* Gallery Images */
+.image-gallery {
     display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 400px; /* Set a fixed height */
+    object-fit: cover; /* Cover the entire container */
+    object-position: center; /* Show the center of the image */
+}
+
+/* Figure Caption Styling */
+figure {
+    position: relative;
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
 }
 
 /* -------------info------------------- */
@@ -111,6 +181,11 @@ nav ul li a:hover {
 }
 
 /* -------------buttons------------- */
+
+#buttons {
+    text-align: center;
+    padding-top: 10px;
+}
 
 .button {
     display: inline-block;
