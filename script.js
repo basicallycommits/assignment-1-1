@@ -90,3 +90,10 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
+// When the user presses the escape key, close the modal
+document.onkeydown = function (event) {
+    if (event.key === "Escape") {
+        modal.style.display = "none";
+    }
+}
