@@ -10,7 +10,7 @@
 
 body {
     background: #fff;
-    color: #141414;
+    color: #555;
 }
 
 p {
@@ -29,12 +29,14 @@ p {
     height: 15vh;
 }
 
-.content {
-    text-align: center;
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
-nav {
+#header span {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,12 +52,49 @@ nav {
     font-size: 30px;
 }
 
-.header-text span {
-    color: #F44611;
-}
-
 .header-text h1 {
     font-size: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    position: relative;
+    border-bottom: 2px solid transparent; /* Set initial border */
+    transition: border-bottom 0.3s ease; /* Add transition */
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #F44611; /* Change border color on hover */
 }
 
 /* ----------banner---------- */
@@ -71,7 +110,7 @@ nav {
     align-items: center;
 }
 
-/* -------------button------------- */
+/* -------------buttons------------- */
 
 .button {
     display: inline-block;
