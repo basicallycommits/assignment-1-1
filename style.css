@@ -105,7 +105,7 @@ nav ul li a:hover {
     transform: translateY(-50%);
     width: auto; /* Adjust width as needed */
     height: auto; /* Adjust height as needed */
-    background-color: rgba(255, 255, 255, 0.5); /* Slightly transparent */
+    background-color: rgba(255, 255, 255, 0.0); /* Slightly transparent */
     cursor: pointer;
     z-index: 1; /* Ensure buttons are above the images */
     font-family: Arial, sans-serif; /* Change font family as needed */
