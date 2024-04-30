@@ -4,6 +4,7 @@ const galleryItems = document.querySelectorAll('.gallery-item');
 const imageGallery = document.querySelector('.image-gallery');
 let currentIndex = 0;
 
+// Function to show caption for the current image
 function showCaption(index) {
     galleryItems.forEach(item => {
         const caption = item.querySelector('figcaption');
@@ -13,13 +14,13 @@ function showCaption(index) {
     currentCaption.style.transform = 'translateY(0)'; 
 }
 
-showCaption(0);
-
+// Function to translate the image gallery to the specified index
 function translateGallery(index) {
     const offset = -index * 100;
     imageGallery.style.transform = `translateX(${offset}%)`; 
 }
 
+// Event listener for clicking the left arrow
 leftArrow.addEventListener('click', () => {
     if (currentIndex > 0) {
         currentIndex--;
@@ -33,6 +34,7 @@ leftArrow.addEventListener('click', () => {
     }
 });
 
+// Event listener for clicking the right arrow
 rightArrow.addEventListener('click', () => {
     if (currentIndex < galleryItems.length - 1) {
         currentIndex++;
@@ -46,14 +48,11 @@ rightArrow.addEventListener('click', () => {
     }
 });
 
-// Add event listener for the wheel event on the document
+// Event listener for scrolling
 document.addEventListener('wheel', event => {
-    // Check if the event is due to scrolling up or down
     if (event.deltaY < 0) {
-        // Scroll up: Click on the left arrow to go to the previous image
         leftArrow.click();
     } else {
-        // Scroll down: Click on the right arrow to go to the next image
         rightArrow.click();
     }
 });
@@ -63,37 +62,28 @@ leftArrow.disabled = true;
 leftArrow.classList.add('disabled');
 
 
-/* ------------Modal---------------- */
 
-// Get the modal
-var modal = document.getElementById("modal");
+/* -------------Modal Functionality---------------- */
+const modal = document.getElementById("modal");
+const triggerModal = document.getElementById("trigger-modal");
+const closeModal = document.getElementById("close-modal");
 
-// Get the button that opens the modal
-var triggerModal = document.getElementById("trigger-modal");
-
-// Get the close button
-var closeModal = document.getElementById("close-modal");
-
-// When the user clicks the button, open the modal
-triggerModal.onclick = function () {
+triggerModal.addEventListener('click', () => {
     modal.style.display = "block";
-}
+});
 
-// When the user clicks on <span> (x), close the modal
-closeModal.onclick = function () {
+closeModal.addEventListener('click', () => {
     modal.style.display = "none";
-}
+});
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
+window.addEventListener('click', event => {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-}
+});
 
-// When the user presses the escape key, close the modal
-document.onkeydown = function (event) {
+document.addEventListener('keydown', event => {
     if (event.key === "Escape") {
         modal.style.display = "none";
     }
-}
+});
