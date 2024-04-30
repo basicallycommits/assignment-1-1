@@ -46,6 +46,9 @@ rightArrow.addEventListener('click', () => {
     }
 });
 
+// Disable left arrow when page first loads
+leftArrow.disabled = true;
+leftArrow.classList.add('disabled');
 
 // Get the modal
 var modal = document.getElementById("modal");
