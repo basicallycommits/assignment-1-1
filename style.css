@@ -80,9 +80,19 @@ nav ul li a {
     /* Add transition */
 }
 
-nav ul li a:hover {
-    border-bottom: 2px solid #F44611;
-    /* Change border color on hover */
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #F44611;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
 }
 
 /* ----------banner---------- */
