@@ -140,9 +140,6 @@ nav ul li a:hover {
 }
 
 /* Gallery Images */
-.image-gallery {
-    display: flex;
-}
 
 .image-gallery img {
     width: 100%;
@@ -151,22 +148,22 @@ nav ul li a:hover {
     object-position: center; /* Show the center of the image */
 }
 
-/* Figure Caption Styling */
-figure {
+.image-gallery figure {
     position: relative;
-}
-
-figcaption {
+    margin: 0;
+  }
+  
+  .image-gallery figcaption {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
     padding: 10px;
-    font-size: 14px;
-    text-align: center;
-}
+    box-sizing: border-box;
+  }
+  
 
 /* -------------info------------------- */
 
