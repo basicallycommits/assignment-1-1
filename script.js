@@ -1,17 +1,8 @@
 const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
 const galleryItems = document.querySelectorAll('.gallery-item');
+const imageGallery = document.querySelector('.image-gallery');
 let currentIndex = 0;
-
-function showImage(index) {
-    galleryItems.forEach((image, i) => {
-        if (i === index) {
-            image.style.display = 'block';
-        } else {
-            image.style.display = 'none';
-        }
-    });
-}
 
 // Function to show caption for the currently displayed image
 function showCaption(index) {
@@ -29,15 +20,20 @@ function showCaption(index) {
 // Initially, show the caption for the first image
 showCaption(0);
 
+function translateGallery(index) {
+    const offset = -index * 100; // Calculate translation value
+    imageGallery.style.transform = `translateX(${offset}%)`; // Apply translation
+}
+
 leftArrow.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
-    showImage(currentIndex);
+    translateGallery(currentIndex);
     showCaption(currentIndex);
 });
 
 rightArrow.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % galleryItems.length;
-    showImage(currentIndex);
+    translateGallery(currentIndex);
     showCaption(currentIndex);
 });
 

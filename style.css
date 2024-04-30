@@ -165,19 +165,24 @@ nav ul li a:hover::after {
 
 /* Gallery Images */
 
-.image-gallery img {
-    width: 100%;
-    height: 400px;
-    /* Set a fixed height */
-    object-fit: cover;
-    /* Cover the entire container */
-    object-position: center;
-    /* Show the center of the image */
+.image-gallery {
+    display: flex;
+    transition: transform 0.5s ease;
+    /* Add transition for smooth movement */
 }
 
 .image-gallery figure {
-    position: relative;
-    margin: 0;
+    flex-shrink: 0;
+    /* Prevent items from shrinking */
+    width: 100%;
+    /* Ensure each item takes full width */
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .image-gallery figcaption {
