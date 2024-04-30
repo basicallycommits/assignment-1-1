@@ -74,12 +74,15 @@ nav ul li a {
     color: #333;
     font-size: 24px;
     position: relative;
-    border-bottom: 2px solid transparent; /* Set initial border */
-    transition: border-bottom 0.3s ease; /* Add transition */
+    border-bottom: 2px solid transparent;
+    /* Set initial border */
+    transition: border-bottom 0.3s ease;
+    /* Add transition */
 }
 
 nav ul li a:hover {
-    border-bottom: 2px solid #F44611; /* Change border color on hover */
+    border-bottom: 2px solid #F44611;
+    /* Change border color on hover */
 }
 
 /* ----------banner---------- */
@@ -87,7 +90,7 @@ nav ul li a:hover {
 .banner {
     width: 100%;
     height: 400px;
-    background-image: url('plant.jpg');
+    background-image: url('forest.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -100,6 +103,11 @@ nav ul li a:hover {
 #info .container {
     text-align: center;
     padding-top: 40px;
+}
+
+#info .container span {
+    color: #F44611;
+    font-weight: bold;
 }
 
 /* -------------buttons------------- */
@@ -131,9 +139,11 @@ nav ul li a:hover {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
     overflow: auto;
-    backdrop-filter: blur(5px); /* Apply blur effect to background */
+    backdrop-filter: blur(5px);
+    /* Apply blur effect to background */
 }
 
 #form-ct {
@@ -146,8 +156,10 @@ nav ul li a:hover {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); /* Center modal */
-    z-index: 1001; /* Ensure modal content is above modal overlay */
+    transform: translate(-50%, -50%);
+    /* Center modal */
+    z-index: 1001;
+    /* Ensure modal content is above modal overlay */
 }
 
 .close {
@@ -198,4 +210,3 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #ff7d56;
 }
-
