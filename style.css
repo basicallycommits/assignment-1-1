@@ -33,6 +33,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 20px;
 }
 
 
@@ -45,15 +46,6 @@ p {
 
 .logo {
     width: 160px;
-}
-
-.header-text {
-    margin-top: 20px;
-    font-size: 30px;
-}
-
-.header-text h1 {
-    font-size: 30px;
 }
 
 nav {
@@ -70,7 +62,7 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 nav ul li:first-child {
@@ -80,14 +72,7 @@ nav ul li:first-child {
 nav ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
+    font-size: 24px;
     position: relative;
     border-bottom: 2px solid transparent; /* Set initial border */
     transition: border-bottom 0.3s ease; /* Add transition */
