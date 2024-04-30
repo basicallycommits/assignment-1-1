@@ -4,17 +4,17 @@ const galleryItems = document.querySelectorAll('.gallery-item');
 const imageGallery = document.querySelector('.image-gallery');
 let currentIndex = 0;
 
-// Function to show caption for the currently displayed image
 function showCaption(index) {
     // Hide all captions
     galleryItems.forEach(item => {
         const caption = item.querySelector('figcaption');
-        caption.style.display = 'none';
+        caption.style.transform = 'translateY(100%)'; // Move caption below the image
     });
     // Show caption for the current image
     const currentCaption = galleryItems[index].querySelector('figcaption');
-    currentCaption.style.display = 'block';
+    currentCaption.style.transform = 'translateY(0)'; // Move caption to its original position
 }
+
 
 
 // Initially, show the caption for the first image

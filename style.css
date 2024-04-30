@@ -172,6 +172,7 @@ nav ul li a:hover::after {
 }
 
 .image-gallery figure {
+    position: relative;
     flex-shrink: 0;
     /* Prevent items from shrinking */
     width: 100%;
@@ -191,12 +192,16 @@ nav ul li a:hover::after {
     left: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent background */
     color: white;
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
+    transition: transform 0.5s ease;
+    /* Add transition for smooth movement */
+    transform: translateY(100%);
+    /* Initially hide the caption below the image */
 }
+
 
 
 /* -------------info------------------- */
