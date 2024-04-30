@@ -165,8 +165,8 @@ nav ul li a:hover {
 }
 
 
-/* Style for form sections */
-section {
+/* Style for form div */
+.modal-content form div {
     margin-bottom: 20px;
 }
 
