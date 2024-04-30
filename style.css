@@ -107,6 +107,7 @@ nav ul li a:hover {
     height: 40px;
     background-color: rgba(255, 255, 255, 0.5); /* Slightly transparent */
     cursor: pointer;
+    z-index: 1; /* Ensure arrows are above the images */
 }
 
 .left-arrow {
@@ -124,20 +125,23 @@ nav ul li a:hover {
     content: '';
     position: absolute;
     top: 50%;
+    left: 50%;
     width: 10px;
     height: 2px;
     background-color: #555; /* Arrow color */
+    transform-origin: center;
 }
 
 .left-arrow::before,
 .right-arrow::before {
-    transform: rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .left-arrow::after,
 .right-arrow::after {
-    transform: rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
+
 
 /* Gallery Images */
 
