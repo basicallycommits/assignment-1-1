@@ -86,17 +86,103 @@ nav ul li a:hover {
 }
 
 /* ----------banner---------- */
+.banner-wrapper {
+    width: 100%;
+    max-height: 400px;
+    /* Adjust the max-width as needed */
+    margin: 0 auto;
+    /* Center the banner horizontally */
+    overflow: hidden;
+    /* Hide the arrows that overflow */
+}
 
 .banner {
+    height: 400px;
+    position: relative;
+    /* Added position relative for arrow positioning */
+}
+
+/* Left and Right Buttons */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    /* Adjust width as needed */
+    height: auto;
+    /* Adjust height as needed */
+    background-color: rgba(255, 255, 255, 0.0);
+    /* Slightly transparent */
+    cursor: pointer;
+    z-index: 1;
+    /* Ensure buttons are above the images */
+    font-family: Arial, sans-serif;
+    /* Change font family as needed */
+    padding: 50px;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* Text styles for buttons */
+.navarrow {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(244, 70, 17, 0.5);
+    /* Semi-transparent background color */
+    color: #fff;
+    font-size: 16px;
+    /* Adjust font size as needed */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.5s ease;
+}
+
+.navarrow:hover {
+    background-color: rgba(255, 125, 86, 0.8);
+    /* Semi-transparent hover background color */
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+
+
+/* Gallery Images */
+
+.image-gallery img {
     width: 100%;
     height: 400px;
-    background-image: url('forest.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* Set a fixed height */
+    object-fit: cover;
+    /* Cover the entire container */
+    object-position: center;
+    /* Show the center of the image */
 }
+
+.image-gallery figure {
+    position: relative;
+    margin: 0;
+}
+
+.image-gallery figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
 
 /* -------------info------------------- */
 
@@ -111,6 +197,11 @@ nav ul li a:hover {
 }
 
 /* -------------buttons------------- */
+
+#buttons {
+    text-align: center;
+    padding-top: 10px;
+}
 
 .button {
     display: inline-block;
