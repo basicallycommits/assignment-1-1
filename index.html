@@ -39,9 +39,42 @@
         <div class="content">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet, diam sit amet tincidunt tincidunt,
                 elit mauris lacinia nunc, id aliquam nisl purus nec nunc.</p>
-                <a href="registration_form.html" class="button" id="trigger-modal">Register</a>
+                <a href="#" class="button" id="trigger-modal">Register</a>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span> <!-- Close button -->
+            <form action="#" method="post">
+                <!-- User Details -->
+                <section>
+                    <h2>User Details</h2>
+                    <input type="text" placeholder="Given name" name="given_name">
+                    <input type="text" placeholder="Surname" name="surname">
+                    <input type="text" placeholder="Username" name="username">
+                    <input type="password" placeholder="Password" name="password">
+                </section>
+                <!-- Addresses -->
+                <section>
+                    <h2>Addresses</h2>
+                    <input type="text" placeholder="Home Address" name="home_address">
+                    <input type="text" placeholder="Work Address" name="work_address">
+                </section>
+                <!-- Contacts -->
+                <section>
+                    <h2>Contacts</h2>
+                    <input type="tel" placeholder="Mobile Number" name="mobile_number">
+                    <input type="email" placeholder="Email" name="email">
+                </section>
+                <!-- Submit Button -->
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
