@@ -128,7 +128,6 @@ nav ul li a:hover::after {
     /* Ensure buttons are above the images */
     font-family: Arial, sans-serif;
     /* Change font family as needed */
-    padding: 50px;
 }
 
 .arrow.disabled {
@@ -144,17 +143,17 @@ nav ul li a:hover::after {
 }
 
 .left-arrow {
-    left: 10px;
+    left: 150px;
 }
 
 .right-arrow {
-    right: 10px;
+    right: 150px;
 }
 
 /* Text styles for buttons */
 .navarrow {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 20px 40px;
     background-color: rgba(244, 70, 17, 0.5);
     /* Semi-transparent background color */
     color: #fff;
@@ -173,7 +172,11 @@ nav ul li a:hover::after {
     transform: scale(1.05);
 }
 
-
+.arrow.disabled .navarrow:hover {
+    transform: none;
+    background-color: rgba(244, 70, 17, 0.5);
+    color: #fff;
+}
 
 /* Gallery Images */
 
@@ -216,6 +219,7 @@ nav ul li a:hover::after {
 
 .image-gallery figcaption span {
     font-weight: bold;
+    color: #F44611;
 }
 
 /* -------------info------------------- */
