@@ -5,36 +5,45 @@ const imageGallery = document.querySelector('.image-gallery');
 let currentIndex = 0;
 
 function showCaption(index) {
-    // Hide all captions
     galleryItems.forEach(item => {
         const caption = item.querySelector('figcaption');
-        caption.style.transform = 'translateY(100%)'; // Move caption below the image
+        caption.style.transform = 'translateY(100%)'; 
     });
-    // Show caption for the current image
     const currentCaption = galleryItems[index].querySelector('figcaption');
-    currentCaption.style.transform = 'translateY(0)'; // Move caption to its original position
+    currentCaption.style.transform = 'translateY(0)'; 
 }
 
-
-
-// Initially, show the caption for the first image
 showCaption(0);
 
 function translateGallery(index) {
-    const offset = -index * 100; // Calculate translation value
-    imageGallery.style.transform = `translateX(${offset}%)`; // Apply translation
+    const offset = -index * 100;
+    imageGallery.style.transform = `translateX(${offset}%)`; 
 }
 
 leftArrow.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
-    translateGallery(currentIndex);
-    showCaption(currentIndex);
+    if (currentIndex > 0) {
+        currentIndex--;
+        translateGallery(currentIndex);
+        showCaption(currentIndex);
+        rightArrow.classList.remove('disabled'); // Enable right arrow if moving left
+    }
+    if (currentIndex === 0) {
+        leftArrow.disabled = true;
+        leftArrow.classList.add('disabled'); // Add disabled style to left arrow
+    }
 });
 
 rightArrow.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % galleryItems.length;
-    translateGallery(currentIndex);
-    showCaption(currentIndex);
+    if (currentIndex < galleryItems.length - 1) {
+        currentIndex++;
+        translateGallery(currentIndex);
+        showCaption(currentIndex);
+        leftArrow.classList.remove('disabled'); // Enable left arrow if moving right
+    }
+    if (currentIndex === galleryItems.length - 1) {
+        rightArrow.disabled = true;
+        rightArrow.classList.add('disabled'); // Add disabled style to right arrow
+    }
 });
 
 

@@ -131,6 +131,18 @@ nav ul li a:hover::after {
     padding: 50px;
 }
 
+.arrow.disabled {
+    opacity: 0.2;
+    /* Reduce opacity to visually indicate disabled state */
+    cursor: not-allowed;
+    /* Change cursor to indicate that the button is not clickable */
+}
+
+.arrow.disabled .navarrow {
+    cursor: not-allowed;
+    /* Change cursor for the inner button when disabled */
+}
+
 .left-arrow {
     left: 10px;
 }
