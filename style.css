@@ -131,7 +131,7 @@ nav ul li a:hover::after {
 }
 
 .arrow.disabled {
-    opacity: 0.2;
+    opacity: 0.5;
     /* Reduce opacity to visually indicate disabled state */
     cursor: not-allowed;
     /* Change cursor to indicate that the button is not clickable */
@@ -154,7 +154,7 @@ nav ul li a:hover::after {
 .navarrow {
     display: inline-block;
     padding: 20px 40px;
-    background-color: rgba(244, 70, 17, 0.5);
+    background-color: rgba(244, 70, 17, 1);
     /* Semi-transparent background color */
     color: #fff;
     font-size: 16px;
@@ -163,10 +163,11 @@ nav ul li a:hover::after {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.5s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .navarrow:hover {
-    background-color: rgba(255, 125, 86, 0.8);
+    background-color: rgba(255, 125, 86, 1);
     /* Semi-transparent hover background color */
     color: #ffffff;
     transform: scale(1.05);
@@ -174,7 +175,7 @@ nav ul li a:hover::after {
 
 .arrow.disabled .navarrow:hover {
     transform: none;
-    background-color: rgba(244, 70, 17, 0.5);
+    background-color: rgba(244, 70, 17, 1);
     color: #fff;
 }
 
@@ -219,7 +220,7 @@ nav ul li a:hover::after {
 
 .image-gallery figcaption span {
     font-weight: bold;
-    color: #F44611;
+    color: #E52A08;
 }
 
 /* -------------info------------------- */
@@ -230,7 +231,7 @@ nav ul li a:hover::after {
 }
 
 #info .container span {
-    color: #F44611;
+    color: #E52A08;
     font-weight: bold;
 }
 
