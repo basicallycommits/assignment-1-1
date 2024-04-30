@@ -46,9 +46,24 @@ rightArrow.addEventListener('click', () => {
     }
 });
 
+// Add event listener for the wheel event on the document
+document.addEventListener('wheel', event => {
+    // Check if the event is due to scrolling up or down
+    if (event.deltaY < 0) {
+        // Scroll up: Click on the left arrow to go to the previous image
+        leftArrow.click();
+    } else {
+        // Scroll down: Click on the right arrow to go to the next image
+        rightArrow.click();
+    }
+});
+
 // Disable left arrow when page first loads
 leftArrow.disabled = true;
 leftArrow.classList.add('disabled');
+
+
+/* ------------Modal---------------- */
 
 // Get the modal
 var modal = document.getElementById("modal");
