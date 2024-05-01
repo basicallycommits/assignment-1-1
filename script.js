@@ -52,14 +52,15 @@ rightArrow.addEventListener('click', () => {
     }
 });
 
-// Event listener for scrolling
-document.addEventListener('wheel', event => {
+// Event listener for scrolling only when hovering over the banner
+document.querySelector('.banner').addEventListener('wheel', event => {
     if (event.deltaY < 0) {
         leftArrow.click();
     } else {
         rightArrow.click();
     }
 });
+
 
 // Disable left arrow when page first loads
 leftArrow.disabled = true;
