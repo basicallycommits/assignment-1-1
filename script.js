@@ -78,6 +78,15 @@ document.querySelector('.banner').addEventListener('wheel', event => {
     }
 });
 
+// Event listener for changing image when left/right arrow keys are pressed
+document.addEventListener('keydown', event => {
+    if (event.key === "ArrowLeft") {
+        leftArrow.click();
+    } else if (event.key === "ArrowRight") {
+        rightArrow.click();
+    }
+});
+
 
 // Disable left arrow when page first loads
 leftArrow.disabled = true;
