@@ -342,3 +342,54 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #ff7d56;
 }
+
+/* ------------------responsive feature------------------- */
+
+@media screen and (max-width: 768px) {
+    #header h1 {
+        font-size: 15px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    .container {
+        position: relative; /* Ensure relative positioning for proper alignment */
+    }
+
+    .container .menu {
+        display: none;
+        position: absolute;
+        top: 100%; /* Position below the menu */
+        left: 0;
+        background-color: #fff; /* Background color for dropdown */
+        border: 1px solid #ccc;
+        border-top: none; /* Remove top border */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+        width: 100%; /* Set width to full */
+        text-align: center; /* Center the menu items */
+    }
+
+    .container .menu.active {
+        display: block;
+    }
+
+    .container .menu ul {
+        position: relative; /* Set to relative for positioning */
+    }
+}
