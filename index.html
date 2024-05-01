@@ -22,12 +22,12 @@
                 </span></h1>
             <nav>
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Browse</a></li>
-                    <li><a href="#">Post a Listing</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Locations</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" tabindex="1">About</a></li>
+                    <li><a href="#" tabindex="2">Browse</a></li>
+                    <li><a href="#" tabindex="3">Post a Listing</a></li>
+                    <li><a href="#" tabindex="4">Events</a></li>
+                    <li><a href="#" tabindex="5">Locations</a></li>
+                    <li><a href="#" tabindex="6">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,49 +37,44 @@
         <div class="banner">
             <!-- Left Button -->
             <div class="arrow left-arrow">
-                <button class="navarrow">◄</button>
+                <button class="navarrow" aria-label="Previous Image" tabindex="7">◄</button>
             </div>
             <div class="image-gallery">
-                <!-- Your gallery images go here -->
                 <figure class="gallery-item">
-                    <img src="forest.jpg" alt="(1/6) Image of a coniferous Norwegian forest">
-                    <figcaption>(1/6) <span>Click the arrows</span> or <span>use the scroll wheel</span> to see examples
-                        of what
-                        our
-                        Freecyclers have contributed!</figcaption>
+                    <img src="turbine.jpg" alt="(Photo 1 of 6) Wind turbines on a hill. Caption: Click the arrows or use the scroll wheel to see examples of what our Freecyclers have contributed!" tabindex="8">
+                    <figcaption>(1/6) <span>Click the arrows</span> or <span>use the scroll wheel</span> to see examples of what our Freecyclers have contributed!</figcaption>
                 </figure>
                 <figure class="gallery-item">
-                    <img src="couch.jpg" alt="(2/6)Image of a couch">
+                    <img src="couch.jpg" alt="(Photo 2 of 6) Blue velvet couch. Caption: You can recycle furniture..." tabindex="-1">
                     <figcaption>(2/6) You can recycle furniture...</figcaption>
                 </figure>
                 <figure class="gallery-item">
-                    <img src="clothes.jpg" alt="(3/6) Image of a full clothing rack">
+                    <img src="clothes.jpg" alt="(Photo 3 of 6) Full clothing rack, filled with colourful trousers. Caption: Clothes..." tabindex="-1">
                     <figcaption>(3/6) Clothes...</figcaption>
                 </figure>
                 <figure class="gallery-item">
-                    <img src="hardware.jpg" alt="(4/6) Image of a computer hardware on a desk">
+                    <img src="hardware.jpg" alt="(Photo 4 of 6) Computer hardware on a desk. Caption: Electronics: TVs, computers, laptops, printers, etc." tabindex="-1">
                     <figcaption>(4/6) Electronics: TVs, computers, laptops, printers, etc.</figcaption>
                 </figure>
                 <figure class="gallery-item">
-                    <img src="books.jpg" alt="(5/6) Image of a books on a bookshelf">
-                    <figcaption>(5/6) Even books... </figcaption>
+                    <img src="books.jpg" alt="(Photo 5 of 6) Books on a bookshelf. Caption: Even books..." tabindex="-1">
+                    <figcaption>(5/6) Even books...</figcaption>
                 </figure>
                 <figure class="gallery-item">
-                    <img src="kitchenware.jpg" alt="(6/6) Image of miscellaneous kitchenware in a kitchen">
+                    <img src="kitchenware.jpg" alt="(Photo 6 of 6) Miscellaneous utensils in a kitchen. Caption: ...And much more!" tabindex="-1">
                     <figcaption>(6/6) ...And much more!</figcaption>
                 </figure>
             </div>
-            <!-- Left Button -->
             <!-- Right Button -->
             <div class="arrow right-arrow">
-                <button class="navarrow">►</button>
+                <button class="navarrow" aria-label="Next Image" tabindex="9">►</button>
             </div>
         </div>
     </div>
 
     <div id="info">
         <div class="container">
-            <div class="content">
+            <div class="content" tabindex="10">
                 <p><span>What is freecycling?</span><br>Freecycling is all about giving away items you no
                     longer need to someone who can use them - for <span>free!</span> By participating, you're not only
                     reducing waste
@@ -90,7 +85,7 @@
     </div>
 
     <div id="buttons">
-        <a href="#register" class="button" id="trigger-modal">Register</a>
+        <a href="#register" class="button" id="trigger-modal" tabindex="11">Register</a>
     </div>
 
     <!-- Modal -->
