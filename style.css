@@ -373,16 +373,15 @@ input[type="submit"]:hover {
     .container .menu {
         display: none;
         position: absolute;
-        top: calc(8vh + 10px); /* Position the dropdown menu just below the hamburger icon */
+        top: calc(8vh + 10px); /* Adjust based on the height of the header and any additional spacing */
+        right: 10px; /* Position the menu 10px from the right edge */
         background-color: #fff; /* Background color for dropdown */
         border: 1px solid #ccc;
         border-top: none; /* Remove top border */
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-        width: auto; /* Set width to auto */
-        text-align: center; /* Center the menu items */
+        width: 30%; /* Set width to 30% of the viewport width */
+        text-align: left; /* Justify text to the left */
         z-index: 100; /* Ensure the menu appears above other content */
-        padding: 10px; /* Add padding */
-        right: 10%; /* Position the dropdown menu on the right side */
     }
     
     .container .menu.active {
@@ -394,8 +393,9 @@ input[type="submit"]:hover {
         flex-direction: column; /* Display menu items vertically */
         align-items: center; /* Center-align menu items */
         padding: 0; /* Remove default padding */
+        text-align: left; /* Justify text to the left */
     }
-    
+
     .container .menu li {
         margin: 10px 0; /* Add vertical margin between menu items */
     }
