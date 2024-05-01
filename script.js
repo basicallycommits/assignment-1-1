@@ -124,3 +124,11 @@ document.addEventListener('keydown', event => {
         modal.style.display = "none";
     }
 });
+
+
+/* -------------Responsiveness Features---------------- */
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+        document.querySelector('.menu').classList.toggle('active');
+    });
+});
