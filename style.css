@@ -355,11 +355,9 @@ input[type="submit"]:hover {
     }
 
     .menu-toggle {
-        display: block;
         cursor: pointer;
-        padding: 10px;
     }
-
+    
     .bar {
         width: 25px;
         height: 3px;
@@ -371,25 +369,77 @@ input[type="submit"]:hover {
     .container {
         position: relative; /* Ensure relative positioning for proper alignment */
     }
-
+    
     .container .menu {
         display: none;
         position: absolute;
-        top: 100%; /* Position below the menu */
-        left: 0;
+        top: calc(8vh + 10px); /* Position the dropdown menu just below the hamburger icon */
         background-color: #fff; /* Background color for dropdown */
         border: 1px solid #ccc;
         border-top: none; /* Remove top border */
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-        width: 100%; /* Set width to full */
+        width: auto; /* Set width to auto */
         text-align: center; /* Center the menu items */
+        z-index: 100; /* Ensure the menu appears above other content */
+        padding: 10px; /* Add padding */
+        right: 10%; /* Position the dropdown menu on the right side */
     }
-
+    
     .container .menu.active {
         display: block;
     }
-
+    
     .container .menu ul {
-        position: relative; /* Set to relative for positioning */
+        display: flex;
+        flex-direction: column; /* Display menu items vertically */
+        align-items: center; /* Center-align menu items */
+        padding: 0; /* Remove default padding */
+    }
+    
+    .container .menu li {
+        margin: 10px 0; /* Add vertical margin between menu items */
+    }
+    
+    
+    
+    
+    
+    
+
+
+    .navarrow {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: rgba(244, 70, 17, 1);
+        /* Semi-transparent background color */
+        color: #fff;
+        font-size: 16px;
+        /* Adjust font size as needed */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.5s ease;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    #info .container p {
+        font-size: 14px; /* Updated font size */
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px; /* Updated padding */
+        background-color: #F44611;
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.5s ease;
+    }
+
+    .button:hover {
+        background-color: #ff7d56;
+        color: #ffffff;
+        transform: scale(1.05);
     }
 }
