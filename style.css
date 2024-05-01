@@ -143,11 +143,11 @@ nav ul li a:hover::after {
 }
 
 .left-arrow {
-    left: 150px;
+    left: 10%;
 }
 
 .right-arrow {
-    right: 150px;
+    right: 10%;
 }
 
 /* Text styles for buttons */
