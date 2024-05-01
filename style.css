@@ -423,6 +423,24 @@ input[type="submit"]:hover {
         object-fit: cover;
         object-position: center;
     }
+
+    .image-gallery figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+        transition: transform 0.5s ease;
+        /* Add transition for smooth movement */
+        transform: translateY(100%);
+        /* Initially hide the caption below the image */
+        font-size: 14px; /* Modify the font size as desired */
+    }
+
     
 
 
