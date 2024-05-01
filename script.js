@@ -14,6 +14,21 @@ function showCaption(index) {
     currentCaption.style.transform = 'translateY(0)'; 
 }
 
+// Function to update tabindex attributes for images
+function updateTabIndices() {
+    galleryItems.forEach((item, index) => {
+        const image = item.querySelector('img');
+        const figcaption = item.querySelector('figcaption');
+        if (index === currentIndex) {
+            image.tabIndex = 8; // Set tabindex to 8 for the current image
+            figcaption.tabIndex = -1; // Set tabindex to -1 for the current figcaption
+        } else {
+            image.tabIndex = -1; // Set tabindex to -1 for other images
+            figcaption.tabIndex = -1; // Set tabindex to -1 for other figcaptions
+        }
+    });
+}
+
 // Function to translate the image gallery to the specified index
 function translateGallery(index) {
     const offset = -index * 100;
@@ -25,6 +40,7 @@ leftArrow.addEventListener('click', () => {
     if (currentIndex > 0) {
         currentIndex--;
         translateGallery(currentIndex);
+        updateTabIndices(); // Update tabindex attributes
         showCaption(currentIndex);
         rightArrow.classList.remove('disabled'); // Enable right arrow if moving left
         rightArrow.removeAttribute('aria-disabled');
@@ -41,6 +57,7 @@ rightArrow.addEventListener('click', () => {
     if (currentIndex < galleryItems.length - 1) {
         currentIndex++;
         translateGallery(currentIndex);
+        updateTabIndices(); // Update tabindex attributes
         showCaption(currentIndex);
         leftArrow.classList.remove('disabled'); // Enable left arrow if moving right
         leftArrow.removeAttribute('aria-disabled');
@@ -70,6 +87,8 @@ leftArrow.setAttribute('aria-disabled', 'true');
 // Show caption for the first image
 showCaption(currentIndex);
 
+// Update tabindex attributes for the first image
+updateTabIndices(); // Update tabindex attributes
 
 
 /* -------------Modal Functionality---------------- */
