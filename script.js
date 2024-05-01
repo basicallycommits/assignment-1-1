@@ -27,10 +27,12 @@ leftArrow.addEventListener('click', () => {
         translateGallery(currentIndex);
         showCaption(currentIndex);
         rightArrow.classList.remove('disabled'); // Enable right arrow if moving left
+        rightArrow.removeAttribute('aria-disabled');
     }
     if (currentIndex === 0) {
         leftArrow.disabled = true;
         leftArrow.classList.add('disabled'); // Add disabled style to left arrow
+        leftArrow.setAttribute('aria-disabled', 'true');
     }
 });
 
@@ -41,10 +43,12 @@ rightArrow.addEventListener('click', () => {
         translateGallery(currentIndex);
         showCaption(currentIndex);
         leftArrow.classList.remove('disabled'); // Enable left arrow if moving right
+        leftArrow.removeAttribute('aria-disabled');
     }
     if (currentIndex === galleryItems.length - 1) {
         rightArrow.disabled = true;
         rightArrow.classList.add('disabled'); // Add disabled style to right arrow
+        rightArrow.setAttribute('aria-disabled', 'true');
     }
 });
 
@@ -60,6 +64,7 @@ document.addEventListener('wheel', event => {
 // Disable left arrow when page first loads
 leftArrow.disabled = true;
 leftArrow.classList.add('disabled');
+leftArrow.setAttribute('aria-disabled', 'true');
 
 // Show caption for the first image
 showCaption(currentIndex);
