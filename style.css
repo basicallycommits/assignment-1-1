@@ -228,6 +228,8 @@ nav ul li a:hover::after {
 #info .container {
     text-align: center;
     padding-top: 40px;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 #info .container span {
