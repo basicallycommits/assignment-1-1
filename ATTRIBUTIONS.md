@@ -10,5 +10,9 @@
 - Vladimir Gladkov ([@vovkapanda](https://unsplash.com/@vovkapanda)): [Image 5](https://unsplash.com/photos/qrst7890)
 - Appolinary Kalashnikova ([@appolinary_kalashnikova](https://unsplash.com/@appolinary_kalashnikova)): [Image 6](https://unsplash.com/photos/wind-turbine-surrounded-by-grass-WYGhTLym344)
 
+## Logo image
+
+- Logo image created with [Logo.com](https://www.logo.com)
+
 ### Notes
 - All images sourced from Unsplash are used under the Unsplash License.
