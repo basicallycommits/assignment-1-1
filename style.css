@@ -1,13 +1,13 @@
 /* ---------general--------- */
 
 :root {
-    --padding-margin: 10%;
-  }
+    --margin-small: 10%;
+    --margin-medium: 15%;
+}
 
 * {
     margin: 0;
     padding: 0;
-    /* setting the font */
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
@@ -23,7 +23,8 @@ p {
 }
 
 .container {
-    padding: 10px var(--padding-margin);
+    /* By default, any container complies with a 10% margin on left/right */
+    padding: 10px var(--margin-small);
 }
 
 /* -------------header------------- */
@@ -58,6 +59,7 @@ nav {
     align-items: center;
 }
 
+/* Menu-list */
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -78,14 +80,16 @@ nav ul li a {
     color: #333;
     font-size: 24px;
     position: relative;
-    border-bottom: 2px solid transparent;
     /* Set initial border */
-    transition: border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
     /* Add transition */
+    transition: border-bottom 0.3s ease;
 }
 
+/* Create the underline */
 nav ul li a::after {
     content: '';
+    /* Underline is not visible until hover (see next style block) */
     width: 0;
     height: 3px;
     background: #F44611;
@@ -95,6 +99,7 @@ nav ul li a::after {
     transition: 0.5s;
 }
 
+/* Adjust width on hover */
 nav ul li a:hover::after {
     width: 100%;
 }
@@ -103,17 +108,13 @@ nav ul li a:hover::after {
 .banner-wrapper {
     width: 100%;
     max-height: 400px;
-    /* Adjust the max-width as needed */
     margin: 0 auto;
-    /* Center the banner horizontally */
     overflow: hidden;
-    /* Hide the arrows that overflow */
 }
 
 .banner {
     height: 400px;
     position: relative;
-    /* Added position relative for arrow positioning */
 }
 
 /* Left and Right Buttons */
@@ -122,36 +123,30 @@ nav ul li a:hover::after {
     top: 50%;
     transform: translateY(-50%);
     width: auto;
-    /* Adjust width as needed */
     height: auto;
-    /* Adjust height as needed */
+    /* Removes jarring white background from the div box */
     background-color: rgba(255, 255, 255, 0.0);
-    /* Slightly transparent */
     cursor: pointer;
-    z-index: 1;
     /* Ensure buttons are above the images */
+    z-index: 1;
     font-family: Arial, sans-serif;
-    /* Change font family as needed */
 }
 
 .arrow.disabled {
     opacity: 0.5;
-    /* Reduce opacity to visually indicate disabled state */
     cursor: not-allowed;
-    /* Change cursor to indicate that the button is not clickable */
 }
 
 .arrow.disabled .navarrow {
     cursor: not-allowed;
-    /* Change cursor for the inner button when disabled */
 }
 
 .left-arrow {
-    left: 10%;
+    left: var(--margin-small);
 }
 
 .right-arrow {
-    right: 10%;
+    right: var(--margin-small);
 }
 
 /* Text styles for buttons */
@@ -159,10 +154,8 @@ nav ul li a:hover::after {
     display: inline-block;
     padding: 20px 40px;
     background-color: rgba(244, 70, 17, 1);
-    /* Semi-transparent background color */
     color: #fff;
     font-size: 16px;
-    /* Adjust font size as needed */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -172,7 +165,6 @@ nav ul li a:hover::after {
 
 .navarrow:hover {
     background-color: rgba(255, 125, 86, 1);
-    /* Semi-transparent hover background color */
     color: #ffffff;
     transform: scale(1.05);
 }
@@ -188,15 +180,13 @@ nav ul li a:hover::after {
 .image-gallery {
     display: flex;
     transition: transform 0.5s ease;
-    /* Add transition for smooth movement */
 }
 
 .image-gallery figure {
     position: relative;
-    flex-shrink: 0;
     /* Prevent items from shrinking */
+    flex-shrink: 0;
     width: 100%;
-    /* Ensure each item takes full width */
 }
 
 .image-gallery img {
@@ -217,9 +207,7 @@ nav ul li a:hover::after {
     box-sizing: border-box;
     text-align: center;
     transition: transform 0.5s ease;
-    /* Add transition for smooth movement */
     transform: translateY(100%);
-    /* Initially hide the caption below the image */
 }
 
 .image-gallery figcaption span {
@@ -227,13 +215,14 @@ nav ul li a:hover::after {
     color: #FC957A;
 }
 
-/* -------------info------------------- */
+/* -------------freecycling info block------------------- */
 
 #info .container {
     text-align: center;
     padding-top: 40px;
-    padding-left: 15%;
-    padding-right: 15%;
+    /* Info container has a bigger margin in order to compress the paragraph more for more comfortable reading */
+    padding-left: var(--margin-medium);
+    padding-right: var(--margin-medium);
 }
 
 #info .container span {
@@ -241,7 +230,7 @@ nav ul li a:hover::after {
     font-weight: bold;
 }
 
-/* -------------buttons------------- */
+/* -------------registration button------------- */
 
 #buttons {
     text-align: center;
@@ -265,8 +254,7 @@ nav ul li a:hover::after {
     transform: scale(1.05);
 }
 
-/* --------------Registration form--------- */
-/* --------------Modal---------------- */
+/* --------------Registration form modal------------ */
 .modal {
     display: none;
     position: fixed;
@@ -275,11 +263,11 @@ nav ul li a:hover::after {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
     /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
     overflow: auto;
-    backdrop-filter: blur(5px);
     /* Apply blur effect to background */
+    backdrop-filter: blur(5px);
 }
 
 #form-ct {
@@ -292,10 +280,10 @@ nav ul li a:hover::after {
     position: absolute;
     left: 50%;
     top: 50%;
+    /* Center the modal */
     transform: translate(-50%, -50%);
-    /* Center modal */
-    z-index: 1001;
     /* Ensure modal content is above modal overlay */
+    z-index: 1001;
 }
 
 .close {
@@ -350,6 +338,8 @@ input[type="submit"]:hover {
 /* ------------------responsive feature------------------- */
 
 @media screen and (max-width: 1024px) {
+
+    /* ----------------header styles------------------- */
     #header h1 {
         font-size: 15px;
     }
@@ -358,10 +348,14 @@ input[type="submit"]:hover {
         font-size: 14px;
     }
 
+    /* -----------hamburger-menu styles-------------- */
+
+    /* Hamburger-menu enclosing div */
     .menu-toggle {
         cursor: pointer;
     }
-    
+
+    /* Hamburger-menu bars */
     .bar {
         width: 25px;
         height: 3px;
@@ -370,117 +364,72 @@ input[type="submit"]:hover {
         transition: 0.4s;
     }
 
-    .container {
-        position: relative; /* Ensure relative positioning for proper alignment */
-    }
-    
     .container .menu {
         display: none;
         position: absolute;
-        top: calc(8vh + 10px); /* Adjust based on the height of the header and any additional spacing */
-        right: 10px; /* Position the menu 10px from the right edge */
-        background-color: #fff; /* Background color for dropdown */
+        top: calc(8vh + 10px);
+        right: 10px;
+        background-color: #fff;
         border: 1px solid #ccc;
-        border-top: none; /* Remove top border */
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-        width: 30%; /* Set width to 30% of the viewport width */
-        text-align: left; /* Justify text to the left */
-        z-index: 100; /* Ensure the menu appears above other content */
+        border-top: none;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        width: 30%;
+        text-align: left;
+        z-index: 100;
     }
-    
+
     .container .menu.active {
         display: block;
     }
-    
+
     .container .menu ul {
         display: flex;
-        flex-direction: column; /* Display menu items vertically */
-        align-items: center; /* Center-align menu items */
-        padding: 0; /* Remove default padding */
-        text-align: left; /* Justify text to the left */
+        /* Display menu items vertically */
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        text-align: left;
     }
 
     .container .menu li {
-        margin: 10px 0; /* Add vertical margin between menu items */
+        /* Add vertical margin between menu items */
+        margin: 10px 0;
     }
-    
-    
+
+
+    /* ----------------banner styles------------------- */
+
     .banner-wrapper {
-        width: 100%;
+        /* Max height is half the original (400px) */
         max-height: 200px;
-        /* Adjust the max-width as needed */
-        margin: 0 auto;
-        /* Center the banner horizontally */
-        overflow: hidden;
-        /* Hide the arrows that overflow */
     }
-    
+
     .banner {
+        /* Max height is half the original (400px) */
         height: 200px;
-        position: relative;
-        /* Added position relative for arrow positioning */
     }
-    
+
     .image-gallery img {
-        width: 100%;
+        /* Max height is half the original (400px) */
         height: 200px;
-        object-fit: cover;
-        object-position: center;
     }
 
     .image-gallery figcaption {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        padding: 10px;
-        box-sizing: border-box;
-        text-align: center;
-        transition: transform 0.5s ease;
-        /* Add transition for smooth movement */
-        transform: translateY(100%);
-        /* Initially hide the caption below the image */
-        font-size: 14px; /* Modify the font size as desired */
+        font-size: 14px;
     }
-
-    
-
 
     .navarrow {
-        display: inline-block;
+        /* Dimensions are half of the original */
         padding: 10px 20px;
-        background-color: rgba(244, 70, 17, 1);
-        /* Semi-transparent background color */
-        color: #fff;
-        font-size: 16px;
-        /* Adjust font size as needed */
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease, color 0.3s ease, transform 0.5s ease;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
-    
+
     #info .container p {
-        font-size: 14px; /* Updated font size */
+        font-size: 14px;
     }
 
     .button {
-        display: inline-block;
-        padding: 10px 20px; /* Updated padding */
-        background-color: #F44611;
-        color: #fff;
+        /* Dimensions are half of the original */
+        padding: 10px 20px;
         font-size: 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease, color 0.3s ease, transform 0.5s ease;
-    }
-
-    .button:hover {
-        background-color: #ff7d56;
-        color: #ffffff;
-        transform: scale(1.05);
     }
 }
