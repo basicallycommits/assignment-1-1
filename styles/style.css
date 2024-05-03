@@ -391,7 +391,7 @@ input[type="submit"]:hover {
     .container .menu {
         display: none;
         position: absolute;
-        top: calc(8vh + 10px);
+        top: 60px;
         right: 10px;
         background-color: #fff;
         border: 1px solid #ccc;
