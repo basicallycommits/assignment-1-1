@@ -50,7 +50,7 @@ p {
 }
 
 .logo {
-    width: 160px;
+    width: 200px;
 }
 
 nav {
@@ -235,6 +235,7 @@ nav ul li a:hover::after {
 #buttons {
     text-align: center;
     padding-top: 10px;
+    padding-bottom: 40px;
 }
 
 .button {
@@ -337,15 +338,38 @@ input[type="submit"]:hover {
 
 /* ------------------responsive feature------------------- */
 
+
+@media screen and (max-width: 1280px) {
+    #header h1 {
+        font-size: 20px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+}
+
 @media screen and (max-width: 1024px) {
 
     /* ----------------header styles------------------- */
+    #header {
+        height: 100px;
+    }
+
     #header h1 {
         font-size: 15px;
     }
 
     nav ul li a {
         font-size: 14px;
+    }
+
+    .logo {
+        width: 100px;
     }
 
     /* -----------hamburger-menu styles-------------- */
@@ -367,7 +391,7 @@ input[type="submit"]:hover {
     .container .menu {
         display: none;
         position: absolute;
-        top: calc(8vh + 10px);
+        top: 60px;
         right: 10px;
         background-color: #fff;
         border: 1px solid #ccc;
@@ -431,15 +455,5 @@ input[type="submit"]:hover {
         /* Dimensions are half of the original */
         padding: 10px 20px;
         font-size: 20px;
-    }
-}
-
-@media screen and (max-width: 1280px) {
-    #header h1 {
-        font-size: 20px;
-    }
-
-    nav ul li a {
-        font-size: 18px;
     }
 }
