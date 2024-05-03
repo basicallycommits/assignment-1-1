@@ -235,7 +235,7 @@ nav ul li a:hover::after {
 #buttons {
     text-align: center;
     padding-top: 10px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 .button {
