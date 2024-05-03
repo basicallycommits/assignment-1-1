@@ -50,7 +50,7 @@ p {
 }
 
 .logo {
-    width: 160px;
+    width: 200px;
 }
 
 nav {
@@ -344,6 +344,10 @@ input[type="submit"]:hover {
         font-size: 20px;
     }
 
+    .logo {
+        width: 150px;
+    }
+
     nav ul li a {
         font-size: 18px;
     }
@@ -362,6 +366,10 @@ input[type="submit"]:hover {
 
     nav ul li a {
         font-size: 14px;
+    }
+
+    .logo {
+        width: 100px;
     }
 
     /* -----------hamburger-menu styles-------------- */
