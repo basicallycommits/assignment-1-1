@@ -433,3 +433,13 @@ input[type="submit"]:hover {
         font-size: 20px;
     }
 }
+
+@media screen and (max-width: 1280px) {
+    #header h1 {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+}
