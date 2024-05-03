@@ -337,9 +337,24 @@ input[type="submit"]:hover {
 
 /* ------------------responsive feature------------------- */
 
+
+@media screen and (max-width: 1280px) {
+    #header h1 {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+}
+
 @media screen and (max-width: 1024px) {
 
     /* ----------------header styles------------------- */
+    #header {
+        height: 100px;
+    }
+
     #header h1 {
         font-size: 15px;
     }
@@ -431,15 +446,5 @@ input[type="submit"]:hover {
         /* Dimensions are half of the original */
         padding: 10px 20px;
         font-size: 20px;
-    }
-}
-
-@media screen and (max-width: 1280px) {
-    #header h1 {
-        font-size: 20px;
-    }
-
-    nav ul li a {
-        font-size: 18px;
     }
 }
