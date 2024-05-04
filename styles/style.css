@@ -182,6 +182,7 @@ nav {
     /* Ensure buttons are above the images */
     z-index: 1;
     font-family: Arial, sans-serif;
+    transition: opacity 0.5s ease;
 }
 
 .arrow.disabled {
