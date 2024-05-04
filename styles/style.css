@@ -395,6 +395,25 @@ input[type="submit"]:hover {
     }
 }
 
+@media screen and (max-width: 1420px) {
+
+    #header h1 {
+        font-size: 15px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    nav ul li {
+        margin-left: 15px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
 @media screen and (max-width: 1024px) {
 
     :root {
@@ -410,7 +429,7 @@ input[type="submit"]:hover {
     }
 
     #header h1 {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     nav ul li a {
@@ -441,7 +460,7 @@ input[type="submit"]:hover {
         display: none;
         position: absolute;
         top: 60px;
-        right: 10px;
+        right: 175px;
         background-color: #fff;
         border: 1px solid #ccc;
         border-top: none;
@@ -472,8 +491,12 @@ input[type="submit"]:hover {
     /* -------------account-menu styles-------------- */
 
     .button {
-        width: 80px;
-        font-size: 16px;
+        width: 65px;
+        font-size: 14px;
+    }
+
+    .account-menu a {
+        margin-left: 10px;
     }
 
     /* ----------------banner styles------------------- */
