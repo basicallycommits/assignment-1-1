@@ -7,6 +7,7 @@
     --margin-register-login: 10px;
 
     --header-height: 180px;
+    --account-menu-width: 200px;
 
     --banner-height: 450px;
 
@@ -64,7 +65,6 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-top: 40px;
 }
 
 /* Menu-list */
@@ -110,6 +110,12 @@ nav ul li a::after {
 /* Adjust width on hover */
 nav ul li a:hover::after {
     width: 100%;
+}
+
+account-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 /* ----------banner---------- */
@@ -240,18 +246,14 @@ nav ul li a:hover::after {
 
 /* -------------registration button------------- */
 
-.button-wrapper {
-    padding-left: 20px;
-}
-
 .button {
     display: inline-block;
     text-align: center;
-    padding: 5px 0;
-    width: 100px;
+    padding: 5px 0px;
+    width: 120px;
     background-color: #ffffff;
     color: #F44611;
-    font-size: 20px;
+    font-size: 24px;
     text-decoration: none;
     border-radius: 5px;
     border: 3px solid #F44611;
@@ -263,7 +265,8 @@ nav ul li a:hover::after {
     color: #fff;
 }
 
-#trigger-modal:hover, #login-button:hover {
+#trigger-modal:hover,
+#login-button:hover {
     background-color: #ff7d56;
     border-color: #ff7d56;
     color: #ffffff;
