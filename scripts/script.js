@@ -132,3 +132,13 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.menu').classList.toggle('active');
     });
 });
+
+// Function to handle screen width changes
+function handleScreenWidthChange() {
+    if (window.innerWidth < 1024) {
+        document.querySelector('.menu-toggle').tabIndex = 1;
+    }
+}
+
+// Event listener for screen width changes
+window.addEventListener('resize', handleScreenWidthChange);
