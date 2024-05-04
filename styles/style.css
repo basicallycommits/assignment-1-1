@@ -1,8 +1,18 @@
 /* ---------general--------- */
 
 :root {
-    --margin-small: 10%;
-    --margin-medium: 15%;
+    /* Margins */
+    --margin-default: 10%;
+    --margin-info: 15%;
+    --margin-register-login: 10px;
+
+    --header-height: 180px;
+    --account-menu-width: 200px;
+    --top-offset: 60px;
+
+    --banner-height: 450px;
+
+    --button-container-height: 120px;
 }
 
 * {
@@ -24,23 +34,22 @@ p {
 
 .container {
     /* By default, any container complies with a 10% margin on left/right */
-    padding: 10px var(--margin-small);
+    padding: 10px var(--margin-default);
 }
 
 /* -------------header------------- */
 
 #header {
     width: 100%;
-    height: 15vh;
+    height: var(--header-height);
 }
 
 #header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
+    padding-top: calc(var(--header-height) * 0.2);
 }
-
 
 #header span {
     display: flex;
@@ -78,7 +87,7 @@ nav ul li:first-child {
 nav ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 24px;
+    font-size: 20px;
     position: relative;
     /* Set initial border */
     border-bottom: 2px solid transparent;
@@ -104,16 +113,59 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+.account-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.account-menu a {
+    margin-left: 20px;
+}
+
+.account-menu,
+nav {
+    margin-top: var(--top-offset);
+}
+
+/* -------------registration button------------- */
+
+.button {
+    display: inline-block;
+    text-align: center;
+    padding: 5px 0px;
+    width: 120px;
+    background-color: #ffffff;
+    color: #F44611;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 3px solid #F44611;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.5s ease, border-color 0.3s ease;
+}
+
+#trigger-modal {
+    background-color: #F44611;
+    color: #fff;
+}
+
+#trigger-modal:hover,
+#login-button:hover {
+    background-color: #ff7d56;
+    border-color: #ff7d56;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
 /* ----------banner---------- */
 .banner-wrapper {
     width: 100%;
-    max-height: 400px;
     margin: 0 auto;
     overflow: hidden;
 }
 
 .banner {
-    height: 400px;
+    height: var(--banner-height);
     position: relative;
 }
 
@@ -142,11 +194,11 @@ nav ul li a:hover::after {
 }
 
 .left-arrow {
-    left: var(--margin-small);
+    left: var(--margin-default);
 }
 
 .right-arrow {
-    right: var(--margin-small);
+    right: var(--margin-default);
 }
 
 /* Text styles for buttons */
@@ -191,7 +243,7 @@ nav ul li a:hover::after {
 
 .image-gallery img {
     width: 100%;
-    height: 400px;
+    height: var(--banner-height);
     object-fit: cover;
     object-position: center;
 }
@@ -221,38 +273,14 @@ nav ul li a:hover::after {
     text-align: center;
     padding-top: 40px;
     /* Info container has a bigger margin in order to compress the paragraph more for more comfortable reading */
-    padding-left: var(--margin-medium);
-    padding-right: var(--margin-medium);
+    padding-left: var(--margin-info);
+    padding-right: var(--margin-info);
+    height: var(--info-height);
 }
 
 #info .container span {
     color: #E52A08;
     font-weight: bold;
-}
-
-/* -------------registration button------------- */
-
-#buttons {
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 20px;
-}
-
-.button {
-    display: inline-block;
-    padding: 20px 40px;
-    background-color: #F44611;
-    color: #fff;
-    font-size: 40px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.5s ease;
-}
-
-.button:hover {
-    background-color: #ff7d56;
-    color: #ffffff;
-    transform: scale(1.05);
 }
 
 /* --------------Registration form modal------------ */
@@ -338,10 +366,24 @@ input[type="submit"]:hover {
 
 /* ------------------responsive feature------------------- */
 
+/* TODO: Fix responsiveness */
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1580px) {
+    :root {
+        --header-height: 120px;
+        --top-offset: 40px;
+
+        --banner-height: 400px;
+    }
+
+
     #header h1 {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .button {
+        width: 80px;
+        font-size: 18px;
     }
 
     .logo {
@@ -353,7 +395,33 @@ input[type="submit"]:hover {
     }
 }
 
+@media screen and (max-width: 1420px) {
+
+    #header h1 {
+        font-size: 15px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    nav ul li {
+        margin-left: 15px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
 @media screen and (max-width: 1024px) {
+
+    :root {
+        --header-height: 100px;
+        --top-offset: 30px;
+
+        --banner-height: 400px;
+    }
 
     /* ----------------header styles------------------- */
     #header {
@@ -361,7 +429,7 @@ input[type="submit"]:hover {
     }
 
     #header h1 {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     nav ul li a {
@@ -392,7 +460,7 @@ input[type="submit"]:hover {
         display: none;
         position: absolute;
         top: 60px;
-        right: 10px;
+        right: 175px;
         background-color: #fff;
         border: 1px solid #ccc;
         border-top: none;
@@ -420,6 +488,16 @@ input[type="submit"]:hover {
         margin: 10px 0;
     }
 
+    /* -------------account-menu styles-------------- */
+
+    .button {
+        width: 65px;
+        font-size: 14px;
+    }
+
+    .account-menu a {
+        margin-left: 10px;
+    }
 
     /* ----------------banner styles------------------- */
 
@@ -449,11 +527,5 @@ input[type="submit"]:hover {
 
     #info .container p {
         font-size: 14px;
-    }
-
-    .button {
-        /* Dimensions are half of the original */
-        padding: 10px 20px;
-        font-size: 20px;
     }
 }
