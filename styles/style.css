@@ -4,9 +4,9 @@
     /* Margins */
     --margin-default: 10%;
     --margin-info: 15%;
-    --margin-register-login: 20%;
+    --margin-register-login: 10px;
 
-    --header-height: 150px;
+    --header-height: 180px;
 
     --banner-height: 450px;
 
@@ -46,9 +46,8 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
+    padding-top: calc(var(--header-height) * 0.2);
 }
-
 
 #header span {
     display: flex;
@@ -65,6 +64,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding-top: 40px;
 }
 
 /* Menu-list */
@@ -86,7 +86,7 @@ nav ul li:first-child {
 nav ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 24px;
+    font-size: 20px;
     position: relative;
     /* Set initial border */
     border-bottom: 2px solid transparent;
@@ -226,7 +226,7 @@ nav ul li a:hover::after {
 
 #info .container {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 40px;
     /* Info container has a bigger margin in order to compress the paragraph more for more comfortable reading */
     padding-left: var(--margin-info);
     padding-right: var(--margin-info);
@@ -240,22 +240,18 @@ nav ul li a:hover::after {
 
 /* -------------registration button------------- */
 
-#buttons {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    padding: 10px var(--margin-register-login) 20px;
-    height: var(--button-container-height);
+.button-wrapper {
+    padding-left: 20px;
 }
 
 .button {
     display: inline-block;
-    padding: 20px 0;
-    width: 300px;
+    text-align: center;
+    padding: 5px 0;
+    width: 100px;
     background-color: #ffffff;
     color: #F44611;
-    font-size: 40px;
+    font-size: 20px;
     text-decoration: none;
     border-radius: 5px;
     border: 3px solid #F44611;
