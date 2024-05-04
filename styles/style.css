@@ -112,10 +112,48 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-account-menu {
+.account-menu {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+.account-menu a {
+    margin-left: 20px;
+}
+
+.account-menu,
+nav {
+    margin-top: 60px;
+}
+
+/* -------------registration button------------- */
+
+.button {
+    display: inline-block;
+    text-align: center;
+    padding: 5px 0px;
+    width: 120px;
+    background-color: #ffffff;
+    color: #F44611;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 3px solid #F44611;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.5s ease, border-color 0.3s ease;
+}
+
+#trigger-modal {
+    background-color: #F44611;
+    color: #fff;
+}
+
+#trigger-modal:hover,
+#login-button:hover {
+    background-color: #ff7d56;
+    border-color: #ff7d56;
+    color: #ffffff;
+    transform: scale(1.05);
 }
 
 /* ----------banner---------- */
@@ -244,35 +282,6 @@ account-menu {
     font-weight: bold;
 }
 
-/* -------------registration button------------- */
-
-.button {
-    display: inline-block;
-    text-align: center;
-    padding: 5px 0px;
-    width: 120px;
-    background-color: #ffffff;
-    color: #F44611;
-    font-size: 24px;
-    text-decoration: none;
-    border-radius: 5px;
-    border: 3px solid #F44611;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.5s ease, border-color 0.3s ease;
-}
-
-#trigger-modal {
-    background-color: #F44611;
-    color: #fff;
-}
-
-#trigger-modal:hover,
-#login-button:hover {
-    background-color: #ff7d56;
-    border-color: #ff7d56;
-    color: #ffffff;
-    transform: scale(1.05);
-}
-
 /* --------------Registration form modal------------ */
 .modal {
     display: none;
@@ -356,6 +365,7 @@ input[type="submit"]:hover {
 
 /* ------------------responsive feature------------------- */
 
+/* TODO: Fix responsiveness */
 
 @media screen and (max-width: 1280px) {
     #header h1 {
