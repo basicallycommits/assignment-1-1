@@ -1,8 +1,16 @@
 /* ---------general--------- */
 
 :root {
-    --margin-small: 10%;
-    --margin-medium: 15%;
+    /* Margins */
+    --margin-default: 10%;
+    --margin-info: 15%;
+    --margin-register-login: 20%;
+
+    --header-height: 150px;
+
+    --banner-height: 450px;
+
+    --button-container-height: 120px;
 }
 
 * {
@@ -24,14 +32,14 @@ p {
 
 .container {
     /* By default, any container complies with a 10% margin on left/right */
-    padding: 10px var(--margin-small);
+    padding: 10px var(--margin-default);
 }
 
 /* -------------header------------- */
 
 #header {
     width: 100%;
-    height: 15vh;
+    height: var(--header-height);
 }
 
 #header .container {
@@ -107,13 +115,12 @@ nav ul li a:hover::after {
 /* ----------banner---------- */
 .banner-wrapper {
     width: 100%;
-    max-height: 400px;
     margin: 0 auto;
     overflow: hidden;
 }
 
 .banner {
-    height: 400px;
+    height: var(--banner-height);
     position: relative;
 }
 
@@ -142,11 +149,11 @@ nav ul li a:hover::after {
 }
 
 .left-arrow {
-    left: var(--margin-small);
+    left: var(--margin-default);
 }
 
 .right-arrow {
-    right: var(--margin-small);
+    right: var(--margin-default);
 }
 
 /* Text styles for buttons */
@@ -191,7 +198,7 @@ nav ul li a:hover::after {
 
 .image-gallery img {
     width: 100%;
-    height: 400px;
+    height: var(--banner-height);
     object-fit: cover;
     object-position: center;
 }
@@ -219,10 +226,11 @@ nav ul li a:hover::after {
 
 #info .container {
     text-align: center;
-    padding-top: 40px;
+    padding-top: 20px;
     /* Info container has a bigger margin in order to compress the paragraph more for more comfortable reading */
-    padding-left: var(--margin-medium);
-    padding-right: var(--margin-medium);
+    padding-left: var(--margin-info);
+    padding-right: var(--margin-info);
+    height: var(--info-height);
 }
 
 #info .container span {
@@ -234,10 +242,11 @@ nav ul li a:hover::after {
 
 #buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
-    padding: 10px 30% 20px;
+    padding: 10px var(--margin-register-login) 20px;
+    height: var(--button-container-height);
 }
 
 .button {
