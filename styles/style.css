@@ -233,14 +233,17 @@ nav ul li a:hover::after {
 /* -------------registration button------------- */
 
 #buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding: 10px 30% 20px;
 }
 
 .button {
     display: inline-block;
-    padding: 20px 40px;
+    width: 300px;
+    padding: 20px 0px;
     background-color: #F44611;
     color: #fff;
     font-size: 40px;
