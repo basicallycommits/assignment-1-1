@@ -8,6 +8,7 @@
 
     --header-height: 180px;
     --account-menu-width: 200px;
+    --top-offset: 60px;
 
     --banner-height: 450px;
 
@@ -124,7 +125,7 @@ nav ul li a:hover::after {
 
 .account-menu,
 nav {
-    margin-top: 60px;
+    margin-top: var(--top-offset);
 }
 
 /* -------------registration button------------- */
@@ -367,9 +368,22 @@ input[type="submit"]:hover {
 
 /* TODO: Fix responsiveness */
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1580px) {
+    :root {
+        --header-height: 120px;
+        --top-offset: 40px;
+
+        --banner-height: 400px;
+    }
+
+
     #header h1 {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .button {
+        width: 80px;
+        font-size: 18px;
     }
 
     .logo {
@@ -382,6 +396,13 @@ input[type="submit"]:hover {
 }
 
 @media screen and (max-width: 1024px) {
+
+    :root {
+        --header-height: 100px;
+        --top-offset: 30px;
+
+        --banner-height: 400px;
+    }
 
     /* ----------------header styles------------------- */
     #header {
@@ -448,6 +469,12 @@ input[type="submit"]:hover {
         margin: 10px 0;
     }
 
+    /* -------------account-menu styles-------------- */
+
+    .button {
+        width: 80px;
+        font-size: 16px;
+    }
 
     /* ----------------banner styles------------------- */
 
@@ -477,11 +504,5 @@ input[type="submit"]:hover {
 
     #info .container p {
         font-size: 14px;
-    }
-
-    .button {
-        /* Dimensions are half of the original */
-        padding: 10px 20px;
-        font-size: 20px;
     }
 }
