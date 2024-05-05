@@ -105,23 +105,49 @@ const modal = document.getElementById("modal");
 const triggerModal = document.getElementById("trigger-modal");
 const closeModal = document.getElementById("close-modal");
 
+// Function to disable tab indices for all elements except modal
+function disableTabIndices() {
+    const elements = document.querySelectorAll('body *:not(#modal *)'); // Exclude elements within the modal
+    elements.forEach(element => {
+        if (!element.hasAttribute('data-original-tabindex')) {
+            element.setAttribute('data-original-tabindex', element.tabIndex);
+        }
+        element.setAttribute('tabIndex', -1);
+    });
+}
+
+// Function to restore tab indices for all elements
+function restoreTabIndices() {
+    const elements = document.querySelectorAll('[data-original-tabindex]');
+    elements.forEach(element => {
+        const originalTabIndex = element.getAttribute('data-original-tabindex');
+        element.setAttribute('tabIndex', originalTabIndex);
+    });
+    updateTabIndices(); // Update tabindex attributes
+}
+
+
 triggerModal.addEventListener('click', () => {
     modal.style.display = "block";
+    disableTabIndices(); // Disable tab indices for all elements except modal
 });
 
 closeModal.addEventListener('click', () => {
     modal.style.display = "none";
+    restoreTabIndices(); // Restore tab indices for all elements
 });
 
 window.addEventListener('click', event => {
     if (event.target == modal) {
         modal.style.display = "none";
+        restoreTabIndices(); // Restore tab indices for all elements
     }
 });
 
 document.addEventListener('keydown', event => {
     if (event.key === "Escape") {
         modal.style.display = "none";
+        restoreTabIndices(); // Restore tab indices for all elements
     }
 });
 
