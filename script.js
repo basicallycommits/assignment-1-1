@@ -20,7 +20,7 @@ function updateTabIndices() {
         const image = item.querySelector('img');
         const figcaption = item.querySelector('figcaption');
         if (index === currentIndex) {
-            image.tabIndex = 10; // Set tabindex to 8 for the current image
+            image.tabIndex = 11; // Set tabindex to 8 for the current image
             figcaption.tabIndex = -1; // Set tabindex to -1 for the current figcaption
         } else {
             image.tabIndex = -1; // Set tabindex to -1 for other images
